@@ -1,0 +1,13 @@
+megs: 512
+romimage: file=/home/zxg/gzhu-os-lab/share/bochs/BIOS-bochs-latest
+vgaromimage: file=/home/zxg/gzhu-os-lab/share/bochs/VGABIOS-lgpl-latest
+
+boot:disk
+log:/home/zxg/gzhu-os-lab/bin/bochs.out
+
+mouse:enabled=1
+keyboard_mapping:keymap=/home/zxg/gzhu-os-lab/share/bochs/keymap/x11-pc-us.map
+
+
+ata0: enabled=1, ioaddr1=0x1f0,ioaddr2=0x3f0, irq=14
+ata0-master: type=disk, path="hd60M.img", mode=flat, cylinders=121, heads=16, spt=63
